@@ -15,8 +15,8 @@ routes.post('/flights', [
     check('flightNumber').notEmpty().withMessage('Flight number is required'),
     check('departureAirport').notEmpty().withMessage('Departure airport is required'),
     check('arrivalAirport').notEmpty().withMessage('Arrival airport is required'),
-    check('departureTime').isISO8601().withMessage('Departure time must be a valid date'),
-    check('arrivalTime').isISO8601().withMessage('Arrival time must be a valid date'),
+    check('departureTime').notEmpty().withMessage('Departure time must be a valid date'),
+    check('arrivalTime').notEmpty().withMessage('Arrival time must be a valid date'),
     check('price').isNumeric().withMessage('Price must be a number'),
     check('journeyDuration').notEmpty().withMessage('Journey duration is required'),
     check('classType').isIn(['Economy', 'Business', 'First']).withMessage('Class type must be Economy, Business, or First')
@@ -28,8 +28,8 @@ routes.put('/flights/:id', [
     check('flightNumber').optional().notEmpty().withMessage('Flight number is required'),
     check('departureAirport').optional().notEmpty().withMessage('Departure airport is required'),
     check('arrivalAirport').optional().notEmpty().withMessage('Arrival airport is required'),
-    check('departureTime').optional().isISO8601().withMessage('Departure time must be a valid date'),
-    check('arrivalTime').optional().isISO8601().withMessage('Arrival time must be a valid date'),
+    check('departureTime').optional().notEmpty().withMessage('Departure time must be a valid date'),
+    check('arrivalTime').optional().notEmpty().withMessage('Arrival time must be a valid date'),
     check('price').optional().isNumeric().withMessage('Price must be a number'),
     check('journeyDuration').optional().notEmpty().withMessage('Journey duration is required'),
     check('classType').optional().isIn(['Economy', 'Business', 'First']).withMessage('Class type must be Economy, Business, or First')

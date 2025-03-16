@@ -137,6 +137,19 @@ module.exports.adminLogout=async(req,res)=>{
         res.status(400).json({msg:"something is wrong..",error:err});
     }
 }
+// delete Admin 
+module.exports.deleteAdmin = async (req, res) => {
+  try {
+    const user = await AdminModel.findByIdAndDelete(req.params.id);
+    if (!user) {
+      return res.status(404).json({ msg: 'User not found' });
+    }
+    res.status(200).json({ msg: 'User deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ msg: 'Something is wrong', error: err });
+  }
+};
+
 //change password
 module.exports.changeAdminPassword = [
     check('currentPass').notEmpty().withMessage('Current password is required'),

@@ -14,6 +14,8 @@ routes.get('/Profile',AdminController.profile);
 routes.get('/ViewAdmin',AdminController.ViewAdmin);
 // Update Admin
 routes.put('/UpdateAdmin/:id', AdminController.updateAdmin);
+//delete Admin
+routes.delete('/DeleteAdmin/:id',AdminController.deleteAdmin);
 //admin logout
 routes.get('/AdminLogout',AdminController.adminLogout);
 //change admin Password

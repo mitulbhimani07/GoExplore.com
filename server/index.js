@@ -38,6 +38,7 @@ app.use('/uploads',express.static(path.join(__dirname,'uploads')))
 app.use('/RentalCars',require('./routes/api/v1/RentalCarRoutes/GoExplore.RentalCarRoutes'))
 app.use('/Hoels',require('./routes/api/v1/HotelsRoutes/GoExplore.HotelsRoutes'))
 app.use('/Flights',require('./routes/api/v1/FlightsRoutes/GoExplore.FlightsRoutes'))
+app.use('/Users',require('./routes/userRoutes'))
 app.use('/Admin',require('./routes/AdminRoutes'))
 
 app.listen(PORT,(err)=>{
