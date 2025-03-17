@@ -6,7 +6,7 @@ export default function header() {
     <div>
 
 
-      <nav class="bg-white border-gray-200 p-4"style={{backgroundColor:'oklch(0.94 0.06 68.14)'}}>
+      <nav class="bg-white border-gray-200 p-4">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
           <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={logo} class="w-60" alt="Flowbite Logo" />
@@ -21,7 +21,7 @@ export default function header() {
             </button>
           </div>
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-200 md:dark:bg-gray-200 dark:border-gray-700"style={{backgroundColor:'oklch(0.94 0.06 68.14)'}}>
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white  dark:border-gray-700">
               <li>
                 <a href="#" class="block py-2 px-3 md:p-0 text-black bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:dark:text-blue-500" aria-current="page"><Link to='/'>Airline</Link></a>
               </li>
